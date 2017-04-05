@@ -40,7 +40,7 @@ var bombas = document.getElementsByClassName('bombas');
 
 function mostrarBombitas(){
   for(var i = 0;i< bombas.length;i++){
-    bombas[i].innerHTML = "❌";
+    bombas[i].innerHTML = "☠";
   }
   alert("perdiste bebé :(")
   botones();
