@@ -30,7 +30,7 @@ botonColor2.addEventListener("click",cambiarColor);
 
 function cambiarColor(){
 var papa =this.parentNode;
-papa.innerHTML= papa.style.backgroundColor = "yellow";
+papa.innerHTML= papa.style.backgroundColor = "#CC99CC";
 papa.innerText="";
 }
 var bombas = document.getElementsByClassName('bombas');
@@ -42,5 +42,25 @@ function mostrarBombitas(){
   for(var i = 0;i< bombas.length;i++){
     bombas[i].innerHTML = "❌";
   }
-  alert("perdiste bebé :( )")
+  alert("perdiste bebé :(")
+  botones();
+   }
+
+  function botones(){
+  var botoncitosTodos = document.getElementsByTagName('button');
+    for(var i = 0;i< botoncitosTodos.length;i++){
+    botoncitosTodos[i].addEventListener("click",parar);
+    }
+  function parar(){
+  event.stopPropagation();
+ }
 }
+// var tablita = document.getElementById('almacenTabla');
+// var botoncito =document.getElementById('almacenBoton');
+// tablita.addEventListener("click",ninja);
+// botoncito.addEventListener("click",ninja);
+//
+// function ninja(e){
+//   alert("¡no te salgas de la caja!")
+//   e.stopPropagation();
+// }
