@@ -18,7 +18,7 @@ else if (this.value==2){
   padre.innerHTML="2";
   }
 }
-
+var botonReiniciar = document.getElementById("botonReiniciar");
 botonReiniciar.addEventListener("click", reiniciarJuego);
 function reiniciarJuego(){
    window.location.reload();
@@ -50,9 +50,10 @@ function mostrarBombitas(){
   var botoncitosTodos = document.getElementsByTagName('button');
     for(var i = 0;i< botoncitosTodos.length;i++){
     botoncitosTodos[i].addEventListener("click",parar);
-    botoncitosTodos[i].addEventListener("click",cambiarColor);
-    botoncitosTodos[i].addEventListener("click",mostrarNumeros);
-    botoncitosTodos[i].addEventListener("click",mostrarBombitas);
+    botoncitosTodos[i].removeEventListener("click",cambiarColor);
+    botoncitosTodos[i].removeEventListener("click",mostrarBombitas);
+    botoncitosTodos[i].removeEventListener("click",mostrarNumeros);
+
     }
   function parar(){
   event.stopPropagation();
