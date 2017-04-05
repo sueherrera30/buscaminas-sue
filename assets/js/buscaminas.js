@@ -50,6 +50,9 @@ function mostrarBombitas(){
   var botoncitosTodos = document.getElementsByTagName('button');
     for(var i = 0;i< botoncitosTodos.length;i++){
     botoncitosTodos[i].addEventListener("click",parar);
+    botoncitosTodos[i].addEventListener("click",cambiarColor);
+    botoncitosTodos[i].addEventListener("click",mostrarNumeros);
+    botoncitosTodos[i].addEventListener("click",mostrarBombitas);
     }
   function parar(){
   event.stopPropagation();
